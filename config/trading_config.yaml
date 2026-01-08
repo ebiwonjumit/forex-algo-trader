@@ -1,0 +1,97 @@
+# Trading Configuration
+# This file contains general trading parameters
+
+trading:
+  # Trading hours (UTC)
+  start_hour: 0
+  end_hour: 24
+  
+  # Days to trade (0 = Monday, 6 = Sunday)
+  trading_days: [0, 1, 2, 3, 4]  # Monday through Friday
+  
+  # Currency pairs to trade
+  currency_pairs:
+    - EUR_USD
+    # - GBP_USD
+    # - USD_JPY
+  
+  # Timeframes for analysis (in minutes)
+  timeframes:
+    primary: 60      # 1 hour
+    secondary: 240   # 4 hours
+
+# Risk Management
+risk:
+  # Maximum risk per trade (as decimal, 0.02 = 2%)
+  max_risk_per_trade: 0.02
+  
+  # Maximum daily loss (as decimal, 0.05 = 5%)
+  max_daily_loss: 0.05
+  
+  # Maximum number of open positions
+  max_open_positions: 3
+  
+  # Stop loss settings
+  stop_loss:
+    method: "atr"  # Options: "fixed_pips", "atr", "percentage"
+    atr_multiplier: 2.0
+    fixed_pips: 50
+    percentage: 0.01
+  
+  # Take profit settings
+  take_profit:
+    risk_reward_ratio: 2.0  # 1:2 risk/reward
+    use_trailing_stop: false
+    trailing_stop_pips: 30
+
+# Strategy Configuration
+strategy:
+  name: "sma_crossover"
+  
+  # Simple Moving Average parameters
+  sma:
+    short_period: 20
+    long_period: 50
+  
+  # Entry rules
+  entry:
+    min_candles_after_cross: 1
+    volume_filter: false
+    
+  # Exit rules
+  exit:
+    use_opposite_signal: true
+    max_hold_time_hours: 72
+
+# Data Configuration
+data:
+  # Historical data fetch settings
+  historical_days: 365
+  
+  # Data storage
+  storage_path: "data/historical"
+  
+  # Data refresh interval (minutes)
+  refresh_interval: 5
+
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/trading.log"
+  console: true
+
+# Backtesting Configuration
+backtest:
+  # Slippage (pips)
+  slippage: 1
+  
+  # Commission per trade (in base currency)
+  commission: 0.0
+  
+  # Spread (pips) - typical for EUR/USD
+  spread: 2
+  
+  # Initial capital for backtesting
+  initial_capital_micro: 1000
+  initial_capital_retail: 5000

@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables (contains API keys!)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Data files
+data/historical/*.csv
+data/trades/*.csv
+data/trades/*.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Config (may contain sensitive info)
+config/local_config.yaml
+config/production_config.yaml
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+temp/
+tmp/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Secrets and credentials
+secrets/
+credentials/
+*.pem
+*.key
+api_keys.txt
