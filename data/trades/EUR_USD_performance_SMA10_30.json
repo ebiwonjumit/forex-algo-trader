@@ -1,0 +1,14 @@
+{
+  "total_trades": 26,
+  "winning_trades": 9,
+  "losing_trades": 17,
+  "win_rate": 34.61538461538461,
+  "total_pips": -102.90000000000576,
+  "average_pips_per_trade": -3.9576923076925294,
+  "best_trade_pips": 91.99999999999875,
+  "worst_trade_pips": -36.000000000000476,
+  "average_win_pips": 22.42222222222207,
+  "average_loss_pips": -17.923529411764967,
+  "profit_factor": 0.6622907778142295,
+  "total_return_percent": -0.8780426045210404
+}
